@@ -19,6 +19,9 @@ jobs:
       CCACHE_SLOPPINESS: time_macros
       OS: windows
       TARGET: msys2
+       # 添加 Zen 4 优化编译选项
+      CFLAGS: "-march=znver4"
+      CXXFLAGS: "-march=znver4"
     steps:
       - uses: actions/checkout@v4
         with:
